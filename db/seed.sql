@@ -1,0 +1,1 @@
+-- Production seed is intentionally empty. Customer data must be provisioned through authenticated workflows.

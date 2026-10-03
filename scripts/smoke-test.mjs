@@ -1,0 +1,3 @@
+const base=process.env.AURELIS_URL||'http://localhost:8788';
+for(const p of ['/','/demo.html','/access.html','/workspace.html','/admin.html','/docs.html','/security.html']){const r=await fetch(base+p); if(!r.ok) throw new Error(`${p} -> ${r.status}`); console.log('OK',p)}
+const r=await fetch(base+'/api/demo/evaluate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({dataSensitivity:'RESTRICTED',destinationTrust:'EXTERNAL_UNTRUSTED',actionSeverity:'CONSEQUENTIAL',approval:'NONE',identityStatus:'KNOWN',vendorRisk:'HIGH'})}); if(!r.ok) throw new Error('demo API failed'); const d=await r.json(); if(d.decision!=='DENY') throw new Error(`unexpected decision ${d.decision}`); console.log('OK /api/demo/evaluate -> DENY');

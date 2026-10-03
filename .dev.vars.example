@@ -1,0 +1,15 @@
+# Google OAuth
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+GOOGLE_REDIRECT_URI=http://localhost:8788/api/auth/google/callback
+
+# Admin authorization. Comma-separated exact email addresses.
+ADMIN_EMAILS=you@example.com
+
+# Optional cookie/session hardening
+SESSION_TTL_SECONDS=28800
+SESSION_SECRET=generate-a-long-random-secret
+
+# App
+APP_ENV=development
+GOOGLE_ALLOWED_DOMAIN=

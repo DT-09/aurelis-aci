@@ -1,0 +1,3 @@
+import test from 'node:test'; import assert from 'node:assert/strict'; import {isAdminEmail,hasEntitlement} from '../src/security/authorization.mjs';
+test('admin allowlist is exact and case insensitive',()=>{assert.equal(isAdminEmail('ADMIN@EXAMPLE.COM','admin@example.com,other@example.com'),true);assert.equal(isAdminEmail('attacker@example.com','admin@example.com'),false)});
+test('entitlement is server-side state',()=>{assert.equal(hasEntitlement([{capabilityId:'ai-assurance',status:'ACTIVE'}],'ai-assurance'),true);assert.equal(hasEntitlement([{capabilityId:'ai-assurance',status:'SUSPENDED'}],'ai-assurance'),false)});

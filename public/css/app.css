@@ -1,0 +1,3 @@
+@import url('./tokens.css');@import url('./base.css');
+.scanline{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.45;animation:scan 3s ease-in-out infinite}@keyframes scan{0%,100%{transform:scaleX(.2);opacity:.1}50%{transform:scaleX(1);opacity:.55}}
+.reveal{animation:reveal .5s ease both}@keyframes reveal{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}

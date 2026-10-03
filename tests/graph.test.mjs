@@ -1,0 +1,2 @@
+import test from 'node:test'; import assert from 'node:assert/strict'; import {buildGraph,blastRadius} from '../src/core/graph.mjs';
+test('graph builds relationships and blast radius',()=>{const g=buildGraph([{fromId:'a',fromLabel:'Agent',fromType:'agent',toId:'m',toLabel:'Model',toType:'model',relationship:'USES'},{fromId:'m',fromLabel:'Model',fromType:'model',toId:'v',toLabel:'Vendor',toType:'vendor',relationship:'DEPENDS_ON'}]);assert.equal(g.nodes.length,3);assert.deepEqual(new Set(blastRadius(g,'a')),new Set(['a','m','v']))});

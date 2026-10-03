@@ -1,0 +1,1 @@
+export async function api(path,options={}){const r=await fetch('/api/'+path,{headers:{'Content-Type':'application/json',...(options.headers||{})},...options}); const d=await r.json().catch(()=>({})); if(!r.ok) throw Object.assign(new Error(d.error||'REQUEST_FAILED'),{status:r.status,code:d.code}); return d;}

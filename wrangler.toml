@@ -1,0 +1,15 @@
+name = "aurelis-aci"
+compatibility_date = "2026-10-03"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = "public"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "aurelis-aci"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+
+[vars]
+APP_ENV = "production"
+GOOGLE_ALLOWED_DOMAIN = ""
+ADMIN_EMAILS = ""
+SESSION_TTL_SECONDS = "28800"

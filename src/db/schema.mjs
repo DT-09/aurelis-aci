@@ -1,0 +1,1 @@
+export const tables = ['tenants','users','sessions','invitations','entitlements','assets','asset_relationships','events','policies','policy_versions','decisions','actions','evidence','findings','remediation_tasks','retests','investigations','investigation_events','changes','problem_requests','control_requests','api_keys','audit_log','reports'];

@@ -1,0 +1,1 @@
+-- Apply db/schema.sql for a new D1 database.
